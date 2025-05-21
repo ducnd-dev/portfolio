@@ -123,17 +123,7 @@ export default function HeroSection() {
           </motion.div>
         </div>
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-gray-500 dark:text-gray-400 mb-2">Scroll Down</span>
-          <div className="w-6 h-10 border-2 border-gray-500 dark:border-gray-400 rounded-full flex justify-center">
-            <div className="w-1.5 h-1.5 bg-gray-500 dark:bg-gray-400 rounded-full mt-2 animate-bounce"></div>
-          </div>
-        </motion.div>
+      
       </div>
     </section>
   );

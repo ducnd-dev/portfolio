@@ -4,21 +4,10 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
-import LanguageSelector from './ui/LanguageSelector';
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [currentLang, setCurrentLang] = useState('en');
-
-  const handleLanguageChange = (lang: string) => {
-    setCurrentLang(lang);
-  };
-
-  const cvLinks = {
-    en: '/cv/resume-en.pdf',
-    vi: '/cv/resume-vi.pdf',
-  };
 
   useEffect(() => {
     setMounted(true);
@@ -62,14 +51,6 @@ export default function Header() {
           </ul>
         </nav>
           <div className="flex items-center space-x-4">
-          <a 
-            href={cvLinks[currentLang as keyof typeof cvLinks]} 
-            target="_blank"
-            className="hidden md:block px-4 py-2 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 text-white hover:shadow-lg transition-all"
-          >
-            Download CV
-          </a>
-          <LanguageSelector onLanguageChange={handleLanguageChange} />
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="rounded-full p-2 text-gray-600 hover:bg-gray-100 hover:text-primary-500 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-primary-400 transition-all"

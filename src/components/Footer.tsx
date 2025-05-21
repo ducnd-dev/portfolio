@@ -11,27 +11,25 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Developer<span className="text-primary">Portfolio</span></h3>            <p className="text-gray-400 mb-4">
-              A professional portfolio showcasing my skills, projects, and experience in web development.            </p>
+          <div>            <h3 className="text-xl font-bold mb-4">Đức<span className="text-primary">Nguyễn</span></h3>            <p className="text-gray-400 mb-4">
+              A professional portfolio showcasing my skills, projects, and experience in web development and software engineering.</p>
             <div className="flex items-center space-x-4">
               <SocialIcons 
                 iconSize={5} 
-                iconClassName="text-gray-400 hover:text-white dark:hover:text-white transition-all transform hover:-translate-y-1"
-                customIcons={[
+                iconClassName="text-gray-400 hover:text-white dark:hover:text-white transition-all transform hover:-translate-y-1"                customIcons={[
                   {
                     name: "Email",
-                    url: "mailto:contact@yourdomain.com",
+                    url: "mailto:nguyendinhducbg2904@gmail.com",
                     icon: FaEnvelope
                   },
                   {
                     name: "Phone",
-                    url: "tel:+12345678900",
+                    url: "tel:+84347634141",
                     icon: FaPhone
                   },
                   {
                     name: "Location",
-                    url: "https://maps.google.com/?q=San+Francisco",
+                    url: "https://maps.google.com/?q=Hanoi+Vietnam",
                     icon: FaMapMarkerAlt
                   }
                 ]}
@@ -71,25 +69,23 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-gray-400 mb-2">
-              <span className="font-medium">Email:</span> contact@yourdomain.com
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>            <p className="text-gray-400 mb-2">
+              <span className="font-medium">Email:</span> nguyendinhducbg2904@gmail.com
             </p>
             <p className="text-gray-400 mb-2">
-              <span className="font-medium">Phone:</span> +1 (234) 567-890
+              <span className="font-medium">Phone:</span> +84 347 634 141
             </p>
             <p className="text-gray-400">
-              <span className="font-medium">Location:</span> San Francisco, CA, USA
+              <span className="font-medium">Location:</span> Ha Noi, Viet Nam
             </p>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-6 text-center">
-          <p className="text-gray-400">
-            &copy; {currentYear} Developer<span className="text-primary">Portfolio</span>. All rights reserved.
+        <div className="border-t border-gray-800 mt-12 pt-6 text-center">          <p className="text-gray-400">
+            &copy; {currentYear} Đức<span className="text-primary">Nguyễn</span>. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            Designed and developed by <span className="text-primary">Your Name</span>
+            Designed and developed by <span className="text-primary">Nguyễn Đình Đức</span>
           </p>
         </div>
       </div>

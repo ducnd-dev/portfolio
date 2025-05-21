@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDatabase, FaDocker, FaGitAlt, FaAws } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiTailwindcss, SiMongodb, SiPostgresql, SiExpress } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDatabase, FaDocker, FaGitAlt, FaLaravel, FaPhp } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiTailwindcss, SiPostgresql, SiNestjs, SiVuedotjs, SiNuxtdotjs, SiDotnet, SiMysql, SiFirebase, SiSupabase, SiGraphql } from 'react-icons/si';
 
 interface Skill {
   name: string;
@@ -11,23 +11,30 @@ interface Skill {
 }
 
 const frontendSkills: Skill[] = [
-  { name: 'React', icon: <FaReact className="h-8 w-8" />, level: 90 },
-  { name: 'TypeScript', icon: <SiTypescript className="h-8 w-8" />, level: 85 },
-  { name: 'Next.js', icon: <SiNextdotjs className="h-8 w-8" />, level: 80 },
+  { name: 'Vue.js', icon: <SiVuedotjs className="h-8 w-8" />, level: 90 },
+  { name: 'React.js', icon: <FaReact className="h-8 w-8" />, level: 85 },
+  { name: 'TypeScript', icon: <SiTypescript className="h-8 w-8" />, level: 88 },
+  { name: 'Nuxt.js', icon: <SiNuxtdotjs className="h-8 w-8" />, level: 85 },
+  { name: 'Next.js', icon: <SiNextdotjs className="h-8 w-8" />, level: 82 },
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="h-8 w-8" />, level: 90 }
 ];
 
 const backendSkills: Skill[] = [
   { name: 'Node.js', icon: <FaNodeJs className="h-8 w-8" />, level: 85 },
-  { name: 'Express', icon: <SiExpress className="h-8 w-8" />, level: 80 },
-  { name: 'MongoDB', icon: <SiMongodb className="h-8 w-8" />, level: 75 },
-  { name: 'PostgreSQL', icon: <SiPostgresql className="h-8 w-8" />, level: 70 }
+  { name: 'NestJS', icon: <SiNestjs className="h-8 w-8" />, level: 85 },
+  { name: 'Laravel', icon: <FaLaravel className="h-8 w-8" />, level: 80 },
+  { name: 'PHP', icon: <FaPhp className="h-8 w-8" />, level: 82 },
+  { name: 'C#/ASP.NET', icon: <SiDotnet className="h-8 w-8" />, level: 75 },
+  { name: 'MySQL', icon: <SiMysql className="h-8 w-8" />, level: 85 },
+  { name: 'PostgreSQL', icon: <SiPostgresql className="h-8 w-8" />, level: 80 }
 ];
 
 const otherSkills: Skill[] = [
-  { name: 'Git', icon: <FaGitAlt className="h-8 w-8" />, level: 85 },
-  { name: 'Docker', icon: <FaDocker className="h-8 w-8" />, level: 70 },
-  { name: 'AWS', icon: <FaAws className="h-8 w-8" />, level: 65 },
+  { name: 'Docker', icon: <FaDocker className="h-8 w-8" />, level: 80 },
+  { name: 'Firebase', icon: <SiFirebase className="h-8 w-8" />, level: 85 },
+  { name: 'Supabase', icon: <SiSupabase className="h-8 w-8" />, level: 75 },
+  { name: 'GraphQL', icon: <SiGraphql className="h-8 w-8" />, level: 75 },
+  { name: 'Git', icon: <FaGitAlt className="h-8 w-8" />, level: 90 },
   { name: 'REST APIs', icon: <FaDatabase className="h-8 w-8" />, level: 90 }
 ];
 

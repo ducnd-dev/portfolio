@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-// import Image from 'next/image';
+import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 interface Project {
@@ -19,63 +19,63 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-stack e-commerce platform with product management, cart functionality, and payment processing.',
-    image: '/projects/placeholder.jpg',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/yourusername/ecommerce',
-    liveUrl: 'https://ecommerce-demo.com',
+    title: 'MYHEART',
+    description: 'A healthcare platform for Czech clients that manages patient health tracking, medical records, and appointment scheduling.',
+    image: '/projects/myheart.jpg',
+    tech: ['Vue.js', 'Laravel', 'MySQL', 'Docker', 'RESTful API'],
+    githubUrl: 'https://github.com/ducnguyen-project/myheart',
+    liveUrl: 'https://myheart.app',
     category: 'fullstack'
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'A drag-and-drop task management application with real-time updates and collaboration features.',
-    image: '/projects/placeholder.jpg',
-    tech: ['React', 'Firebase', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/yourusername/task-manager',
-    liveUrl: 'https://task-app-demo.com',
-    category: 'frontend'
+    title: 'AEONTOWN',
+    description: 'A comprehensive e-commerce platform for Japanese retailers with inventory management, payment processing, and customer analytics.',
+    image: '/projects/aeontown.jpg',
+    tech: ['React.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
+    githubUrl: 'https://github.com/ducnguyen-project/aeontown',
+    liveUrl: 'https://aeontown.jp',
+    category: 'fullstack'
   },
   {
     id: 3,
-    title: 'Social Media API',
-    description: 'A robust RESTful API for a social media platform with authentication, posts, comments, and likes.',
-    image: '/projects/placeholder.jpg',
-    tech: ['Node.js', 'Express', 'MongoDB', 'JWT'],
-    githubUrl: 'https://github.com/yourusername/social-api',
-    liveUrl: 'https://social-api-docs.com',
-    category: 'backend'
+    title: 'DENTALCONNECT',
+    description: 'A dental appointment booking system for Japanese clients with real-time availability, patient records, and automated reminders.',
+    image: '/projects/dentalconnect.jpg',
+    tech: ['Vue.js', 'NestJS', 'MongoDB', 'WebSockets', 'AWS'],
+    githubUrl: 'https://github.com/ducnguyen-project/dentalconnect',
+    liveUrl: 'https://dentalconnect.jp',
+    category: 'fullstack'
   },
   {
     id: 4,
-    title: 'Weather Dashboard',
-    description: 'A weather forecast dashboard with location search, data visualization, and responsive design.',
-    image: '/projects/placeholder.jpg',
-    tech: ['React', 'Chart.js', 'OpenWeather API'],
-    githubUrl: 'https://github.com/yourusername/weather-app',
-    liveUrl: 'https://weather-dashboard-demo.com',
+    title: 'MITSUKURU',
+    description: 'A Japanese real estate platform for property listings, virtual tours, and transaction management with detailed analytics.',
+    image: '/projects/mitsukuru.jpg',
+    tech: ['Next.js', 'TypeScript', 'GraphQL', 'Supabase', 'ThreeJS'],
+    githubUrl: 'https://github.com/ducnguyen-project/mitsukuru',
+    liveUrl: 'https://mitsukuru.jp',
     category: 'frontend'
   },
   {
     id: 5,
-    title: 'Restaurant Ordering System',
-    description: 'A full-stack application for restaurants to manage orders, inventory, and customer information.',
-    image: '/projects/placeholder.jpg',
-    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Docker'],
-    githubUrl: 'https://github.com/yourusername/restaurant-system',
-    liveUrl: 'https://restaurant-system-demo.com',
-    category: 'fullstack'
+    title: 'LINEPRAYER',
+    description: 'A secure communication platform for Japanese clients with end-to-end encryption, file sharing, and group management.',
+    image: '/projects/lineprayer.jpg',
+    tech: ['Nuxt.js', 'Firebase', 'WebRTC', 'Socket.io', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/ducnguyen-project/lineprayer',
+    liveUrl: 'https://lineprayer.com',
+    category: 'frontend'
   },
   {
     id: 6,
-    title: 'Fitness Tracking Mobile App',
-    description: 'A cross-platform mobile app for tracking workouts, nutrition, and fitness progress.',
-    image: '/projects/placeholder.jpg',
-    tech: ['React Native', 'Firebase', 'Redux'],
-    githubUrl: 'https://github.com/yourusername/fitness-app',
-    liveUrl: 'https://fitness-app-demo.com',
-    category: 'mobile'
+    title: 'SAASITY',
+    description: 'A SaaS management dashboard that helps businesses track subscriptions, users, and usage metrics across multiple platforms.',
+    image: '/projects/saasity.jpg',
+    tech: ['React', 'Express', 'PostgreSQL', 'Docker', 'Chart.js'],
+    githubUrl: 'https://github.com/ducnguyen-project/saasity',
+    liveUrl: 'https://saasity.dev',
+    category: 'fullstack'
   }
 ];
 
@@ -104,9 +104,8 @@ export default function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">My Projects</h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-tertiary-500 to-primary-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of the projects I&apos;ve worked on. Each project reflects my skills and experience in different areas.
+          <div className="h-1 w-20 bg-gradient-to-r from-tertiary-500 to-primary-500 mx-auto rounded-full"></div>          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Here are some of the projects I&apos;ve worked on. Each project showcases my experience with different technologies and client industries.
           </p>
         </motion.div>        <div className="flex justify-center flex-wrap gap-2 mb-10">
           <button
@@ -146,7 +145,7 @@ export default function ProjectsSection() {
           >
             Full Stack
           </button>
-        </div>        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -155,15 +154,14 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700 dark:bg-dark-light"
-            >
-              <div className="h-48 w-full relative bg-gray-200 dark:bg-gray-600">
-                {/* Replace with actual project images */}
-                {/* <Image
+            >              <div className="h-48 w-full relative bg-gray-200 dark:bg-gray-600">
+                {/* Project images */}
+                <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover"
-                /> */}
+                />
               </div>
               
               <div className="p-6">

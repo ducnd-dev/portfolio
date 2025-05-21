@@ -90,20 +90,18 @@ export default function ContactSection() {
                   <div className="p-3 bg-primary-100 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400 rounded-lg mr-4 shadow-sm">
                     <FaEnvelope className="h-5 w-5" />
                   </div>
-                  <div>
-                    <h4 className="text-gray-900 dark:text-white font-medium">Email</h4>
-                    <a href="mailto:contact@yourdomain.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                      contact@yourdomain.com
+                  <div>                    <h4 className="text-gray-900 dark:text-white font-medium">Email</h4>
+                    <a href="mailto:nguyendinhducbg2904@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                      nguyendinhducbg2904@gmail.com
                     </a>
                   </div>
                 </div>                <div className="flex items-start">
                   <div className="p-3 bg-secondary-100 text-secondary-600 dark:bg-secondary-900/20 dark:text-secondary-400 rounded-lg mr-4 shadow-sm">
                     <FaPhoneAlt className="h-5 w-5" />
                   </div>
-                  <div>
-                    <h4 className="text-gray-900 dark:text-white font-medium">Phone</h4>
-                    <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-300 hover:text-secondary-500 dark:hover:text-secondary-400 transition-colors">
-                      +1 (234) 567-890
+                  <div>                    <h4 className="text-gray-900 dark:text-white font-medium">Phone</h4>
+                    <a href="tel:+84347634141" className="text-gray-600 dark:text-gray-300 hover:text-secondary-500 dark:hover:text-secondary-400 transition-colors">
+                      +84 347 634 141
                     </a>
                   </div>
                 </div>
@@ -111,32 +109,32 @@ export default function ContactSection() {
                 <div className="flex items-start">                <div className="p-3 bg-tertiary-100 text-tertiary-600 dark:bg-tertiary-900/20 dark:text-tertiary-400 rounded-lg mr-4 shadow-sm">
                     <FaMapMarkerAlt className="h-5 w-5" />
                   </div>
-                  <div>
-                    <h4 className="text-gray-900 dark:text-white font-medium">Location</h4>
+                  <div>                    <h4 className="text-gray-900 dark:text-white font-medium">Location</h4>
                     <p className="text-gray-600 dark:text-gray-300">
-                      San Francisco, CA, USA
+                      Ha Noi, Viet Nam
                     </p>
                   </div>
                 </div>
               </div>
             </div>            <div>              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 Follow Me
-              </h3>
-              <SocialIcons 
+              </h3>              <SocialIcons 
                 iconSize={5} 
                 className="space-x-4" 
                 useGradient={true}
                 showTwitter={false}
+                githubUrl="https://github.com/ducnguyen-dev"
+                linkedinUrl="https://www.linkedin.com/in/nguyen-dinh-duc-bg2904/"
                 customIcons={[
                   {
                     name: "Instagram",
-                    url: "https://instagram.com/yourusername",
+                    url: "https://instagram.com/duc_nguyen2904",
                     icon: FaInstagram,
                     gradientColors: "bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500"
                   },
                   {
                     name: "YouTube",
-                    url: "https://youtube.com/@yourusername",
+                    url: "https://youtube.com/@ducnguyen-dev",
                     icon: FaYoutube,
                     gradientColors: "bg-gradient-to-r from-red-600 to-red-500"
                   }

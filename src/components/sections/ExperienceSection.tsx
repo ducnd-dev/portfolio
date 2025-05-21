@@ -16,69 +16,55 @@ interface TimelineItem {
 const timelineItems: TimelineItem[] = [
   {
     id: 1,
-    title: 'Senior Frontend Developer',
-    company: 'Tech Solutions Inc.',
-    date: 'Jan 2023 - Present',
+    title: 'Fullstack Developer',
+    company: 'YOPAZ',
+    date: 'Sep 2022 - Apr 2025',
     description: [
-      'Leading a team of 5 frontend developers on a large-scale SaaS platform',
-      'Implemented CI/CD pipeline reducing deployment time by 50%',
-      'Architected and developed key features using React and TypeScript',
-      'Improved application performance by 30% through code optimization'
+      'Worked on projects for Japanese clients (e-commerce, healthcare, real estate)',
+      'Participated in the entire software development lifecycle',
+      'Mentored 3 team members, reviewed code, organized internal seminars',
+      'Developed high-performance, user-friendly applications with modern technologies'
     ],
-    technologies: ['React', 'TypeScript', 'Redux', 'Tailwind CSS', 'Jest', 'GitHub Actions'],
+    technologies: ['Vue.js', 'Nuxt.js', 'NestJS', 'Laravel', 'C#/ASP.NET', 'Docker', 'Azure', 'GCP'],
     type: 'work'
   },
   {
     id: 2,
     title: 'Frontend Developer',
-    company: 'Digital Innovations',
-    date: 'Jun 2020 - Dec 2022',
+    company: 'Flextech',
+    date: 'Sep 2021 - Sep 2022',
     description: [
-      'Developed responsive web applications for various clients',
-      'Integrated third-party APIs and services',
-      'Created reusable component libraries',
-      'Collaborated with designers to implement pixel-perfect UIs'
+      'Developed UI following Agile Scrum methodology',
+      'Supported team management: task distribution, mentoring, code reviews',
+      'Built responsive, interactive user interfaces'
     ],
-    technologies: ['React', 'JavaScript', 'SASS', 'REST API', 'Firebase'],
+    technologies: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Socket.IO', 'NestJS'],
     type: 'work'
   },
   {
     id: 3,
-    title: 'Web Development Bootcamp',
-    company: 'Coding Academy',
-    date: 'Jan 2020 - May 2020',
+    title: 'Frontend Developer',
+    company: 'SimiCart',
+    date: 'Sep 2020 - Apr 2021',
     description: [
-      'Intensive full-stack web development program',
-      'Built 5 full-stack projects from concept to deployment',
-      'Participated in pair programming and code reviews'
+      'Created Magento extensions & PWA using React',
+      'Developed responsive e-commerce interfaces',
+      'Worked with GraphQL and RESTful APIs'
     ],
-    technologies: ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB'],
-    type: 'education'
-  },
-  {
-    id: 4,
-    title: 'Junior Web Developer',
-    company: 'Startup Hub',
-    date: 'Mar 2019 - Dec 2019',
-    description: [
-      'Assisted in building website features for early-stage startups',
-      'Fixed bugs and implemented UI improvements',
-      'Worked with various CMS platforms'
-    ],
-    technologies: ['HTML/CSS', 'JavaScript', 'jQuery', 'WordPress'],
+    technologies: ['React.js', 'Redux', 'GraphQL', 'SCSS'],
     type: 'work'
   },
   {
-    id: 5,
-    title: "Bachelor's Degree in Computer Science",
-    company: 'University of Technology',
-    date: '2015 - 2019',
+    id: 4,
+    title: 'Information Technology',
+    company: 'Hanoi College of Technology',
+    date: 'Sep 2017 - Mar 2021',
     description: [
-      'Specialized in Software Engineering',
-      'Participated in coding competitions',
-      'Developed multiple projects as part of coursework'
+      'Studied programming fundamentals and software development',
+      'Developed practical projects and applications',
+      'Gained knowledge in web development technologies'
     ],
-    technologies: ['C++', 'Java', 'Data Structures', 'Algorithms', 'Database Systems'],
+    technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'SQL', 'Data Structures'],
     type: 'education'
   }
 ];

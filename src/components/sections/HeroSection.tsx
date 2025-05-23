@@ -23,7 +23,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="md:w-1/2 mb-12 md:mb-0"
           >            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Hi, I&apos;m <span className="bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">John Doe</span>
+              Hi, I&apos;m <span className="bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">Duc</span>
               <br />
               <span className="text-3xl sm:text-4xl md:text-5xl">Full Stack Developer</span>
             </h1>

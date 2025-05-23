@@ -1,26 +1,69 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Các màu primary */
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --primary-light: #60a5fa;
+
+  /* Các màu secondary */
+  --secondary: #10b981;
+  --secondary-dark: #047857;
+  --secondary-light: #34d399;
+
+  /* Các màu accent */
+  --accent: #d946ef;
+  --accent-dark: #a21caf;
+  --accent-light: #e879f9;
+
+  /* Các màu tertiary */
+  --tertiary: #f97316;
+  --tertiary-dark: #c2410c;
+  --tertiary-light: #fb923c;
+
+  /* Đã xóa các màu dark mode */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Đã xóa media query prefers-color-scheme và dark class */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* Layer đặc biệt cho từng nơi sử dụng gradient */
+@layer components {
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-dark;
+  }
+  
+  .gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-secondary-dark;
+  }
+  
+  .gradient-accent {
+    @apply bg-gradient-to-r from-accent to-accent-dark;
+  }
+  
+  .gradient-tertiary {
+    @apply bg-gradient-to-r from-tertiary to-tertiary-dark;
+  }
+  
+  .primary-to-accent {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+  
+  .secondary-to-accent {
+    @apply bg-gradient-to-r from-secondary to-accent;
+  }
+  
+  .primary-to-tertiary {
+    @apply bg-gradient-to-r from-primary-500 to-tertiary-500;
+  }
 }

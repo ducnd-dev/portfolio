@@ -48,7 +48,7 @@ export default function HeroSection() {
                   Download CV
                 </button>                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-dark-light ring-1 ring-black ring-opacity-5 hidden group-hover:block z-10 overflow-hidden transform origin-top-left transition-all">
                   <div className="py-1" role="menu" aria-orientation="vertical">
-                    <a
+                    {/* <a
                       href="/cv/resume-en.pdf"
                       download
                       className="block px-4 py-2 text-sm text-black-700 dark:text-gray-300 hover:bg-secondary-50 dark:hover:bg-secondary-900/30 hover:text-secondary-600 dark:hover:text-secondary-400 transition-all flex items-center gap-2"
@@ -56,7 +56,7 @@ export default function HeroSection() {
                     >
                       <span className="w-4 h-4 inline-block bg-gradient-to-r from-red-500 to-blue-500 rounded-full opacity-70"></span>
                       English Version
-                    </a>
+                    </a> */}
                     <a
                       href="/cv/resume-vi.pdf"
                       download

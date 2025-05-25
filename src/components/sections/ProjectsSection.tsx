@@ -21,7 +21,7 @@ const projects: Project[] = [
     id: 1,
     title: 'MYHEART',
     description: 'A healthcare platform for Czech clients that manages patient health tracking, medical records, and appointment scheduling.',
-    image: '/projects/myheart.jpg',
+    image: '/projects/myheart.png',
     tech: ['Vue.js', 'Laravel', 'MySQL', 'Docker', 'RESTful API'],
     githubUrl: 'https://github.com/ducnguyen-project/myheart',
     liveUrl: 'https://myheart.app',
@@ -31,7 +31,7 @@ const projects: Project[] = [
     id: 2,
     title: 'AEONTOWN',
     description: 'A comprehensive e-commerce platform for Japanese retailers with inventory management, payment processing, and customer analytics.',
-    image: '/projects/aeontown.jpg',
+    image: '/projects/aeontown.png',
     tech: ['React.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
     githubUrl: 'https://github.com/ducnguyen-project/aeontown',
     liveUrl: 'https://aeontown.jp',
@@ -41,7 +41,7 @@ const projects: Project[] = [
     id: 3,
     title: 'DENTALCONNECT',
     description: 'A dental appointment booking system for Japanese clients with real-time availability, patient records, and automated reminders.',
-    image: '/projects/dentalconnect.jpg',
+    image: '/projects/dentalconnect.png',
     tech: ['Vue.js', 'NestJS', 'MongoDB', 'WebSockets', 'AWS'],
     githubUrl: 'https://github.com/ducnguyen-project/dentalconnect',
     liveUrl: 'https://dentalconnect.jp',
@@ -51,7 +51,7 @@ const projects: Project[] = [
     id: 4,
     title: 'MITSUKURU',
     description: 'A Japanese real estate platform for property listings, virtual tours, and transaction management with detailed analytics.',
-    image: '/projects/mitsukuru.jpg',
+    image: '/projects/mitsukuru.png',
     tech: ['Next.js', 'TypeScript', 'GraphQL', 'Supabase', 'ThreeJS'],
     githubUrl: 'https://github.com/ducnguyen-project/mitsukuru',
     liveUrl: 'https://mitsukuru.jp',
@@ -61,22 +61,12 @@ const projects: Project[] = [
     id: 5,
     title: 'LINEPRAYER',
     description: 'A secure communication platform for Japanese clients with end-to-end encryption, file sharing, and group management.',
-    image: '/projects/lineprayer.jpg',
+    image: '/projects/lineprayer.png',
     tech: ['Nuxt.js', 'Firebase', 'WebRTC', 'Socket.io', 'Tailwind CSS'],
     githubUrl: 'https://github.com/ducnguyen-project/lineprayer',
     liveUrl: 'https://lineprayer.com',
     category: 'frontend'
   },
-  {
-    id: 6,
-    title: 'SAASITY',
-    description: 'A SaaS management dashboard that helps businesses track subscriptions, users, and usage metrics across multiple platforms.',
-    image: '/projects/saasity.jpg',
-    tech: ['React', 'Express', 'PostgreSQL', 'Docker', 'Chart.js'],
-    githubUrl: 'https://github.com/ducnguyen-project/saasity',
-    liveUrl: 'https://saasity.dev',
-    category: 'fullstack'
-  }
 ];
 
 type FilterType = 'all' | 'frontend' | 'backend' | 'fullstack' | 'mobile';

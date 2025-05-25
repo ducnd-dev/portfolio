@@ -28,7 +28,7 @@ export default function SocialIcons({
   className = '', 
   iconSize = 6,
   iconClassName,
-  githubUrl = "https://github.com/yourusername",
+  githubUrl = "https://github.com/ducnd-dev",
   linkedinUrl = "https://linkedin.com/in/yourusername",
   twitterUrl = "https://twitter.com/yourusername",
   showGithub = true,

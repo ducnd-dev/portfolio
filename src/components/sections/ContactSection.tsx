@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import SocialIcons from '../ui/SocialIcons';
 
 export default function ContactSection() {
@@ -123,21 +123,21 @@ export default function ContactSection() {
                 className="space-x-4" 
                 useGradient={true}
                 showTwitter={false}
-                githubUrl="https://github.com/ducnguyen-dev"
-                linkedinUrl="https://www.linkedin.com/in/nguyen-dinh-duc-bg2904/"
+                githubUrl="https://github.com/ducnd-dev"
+                linkedinUrl="https://www.linkedin.com/in/nguyen-dinh-duc-b183561b7/"
                 customIcons={[
-                  {
-                    name: "Instagram",
-                    url: "https://instagram.com/duc_nguyen2904",
-                    icon: FaInstagram,
-                    gradientColors: "bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500"
-                  },
-                  {
-                    name: "YouTube",
-                    url: "https://youtube.com/@ducnguyen-dev",
-                    icon: FaYoutube,
-                    gradientColors: "bg-gradient-to-r from-red-600 to-red-500"
-                  }
+                  // {
+                  //   name: "Instagram",
+                  //   url: "https://instagram.com/duc_nguyen2904",
+                  //   icon: FaInstagram,
+                  //   gradientColors: "bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500"
+                  // },
+                  // {
+                  //   name: "YouTube",
+                  //   url: "https://youtube.com/@ducnguyen-dev",
+                  //   icon: FaYoutube,
+                  //   gradientColors: "bg-gradient-to-r from-red-600 to-red-500"
+                  // }
                 ]}
               />
             </div>

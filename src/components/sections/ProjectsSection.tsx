@@ -27,8 +27,8 @@ const projects: Project[] = [
     description: 'A healthcare platform for Czech clients that analyzes medical requirements, develops AI-based diagnostic features, treatment plans, and progress tracking. Integrates Nuxt.js frontend with ASP.NET backend, deployed on Azure Cloud.',
     image: '/projects/myheart.png',
     tech: ['Vue.js', 'Nuxt.js', 'C#/ASP.NET', 'MSSQL', 'Azure', 'Python'],
-    githubUrl: 'https://github.com/ducnguyen-project/myheart',
-    liveUrl: 'https://myheart.app',
+    githubUrl: '',
+    liveUrl: '',
     category: 'fullstack',
     period: '06/2023 - 04/2025',
     client: 'Czech Republic',
@@ -40,8 +40,8 @@ const projects: Project[] = [
     description: 'An e-commerce platform for Japanese retailers featuring store, order and customer management. Developed with Vue.js frontend and Express/Firebase backend, optimized UI/UX, implemented business logic, and deployed on GCP with notifications for 1 million users.',
     image: '/projects/aeontown.png',
     tech: ['Vue.js', 'Vuex', 'Firebase', 'Express', 'GCP'],
-    githubUrl: 'https://github.com/ducnguyen-project/aeontown',
-    liveUrl: 'https://aeontown.jp',
+    githubUrl: '',
+    liveUrl: '',
     category: 'fullstack',
     period: '08/2024 - 04/2025',
     client: 'Japan',
@@ -53,8 +53,8 @@ const projects: Project[] = [
     description: 'A dental appointment booking system for Japanese clients featuring patient record management, appointment scheduling, Supabase authentication, and responsive UI with Next.js and data synchronization.',
     image: '/projects/dentalconnect.png',
     tech: ['Next.js', 'Tailwind CSS', 'Supabase', 'Shadcn'],
-    githubUrl: 'https://github.com/ducnguyen-project/dentalconnect',
-    liveUrl: 'https://dentalconnect.jp',
+    githubUrl: '',
+    liveUrl: '',
     category: 'fullstack',
     period: '09/2025 - 03/2025',
     client: 'Japan',
@@ -66,8 +66,8 @@ const projects: Project[] = [
     description: 'A Japanese real estate website for buying, selling, and renting properties with search functionality, filtering, OTP, and administration using Vue.js and Laravel. Deployed with Docker and Nginx.',
     image: '/projects/mitsukuru.png',
     tech: ['Vue.js', 'Vuex', 'ElementUI', 'Laravel', 'MySQL', 'Docker'],
-    githubUrl: 'https://github.com/ducnguyen-project/mitsukuru',
-    liveUrl: 'https://mitsukuru.jp',
+    githubUrl: '',
+    liveUrl: '',
     category: 'fullstack',
     period: '04/2024 - 12/2024',
     client: 'Japan',
@@ -79,8 +79,8 @@ const projects: Project[] = [
     description: 'A LineWorks-like platform for Japanese clients featuring scheduling, voice/video calls, and posting. Managed a team of 8, assigned tasks, conducted reviews, handled real-time processing, and connected React frontend with Golang backend. Deployed using Kubernetes and Docker.',
     image: '/projects/lineprayer.png',
     tech: ['React.js', 'Golang', 'MySQL', 'Kubernetes', 'Docker', 'Keycloak'],
-    githubUrl: 'https://github.com/ducnguyen-project/lineprayer',
-    liveUrl: 'https://lineprayer.com',
+    githubUrl: '',
+    liveUrl: '',
     category: 'fullstack',
     period: '12/2023 - 01/2025',
     client: 'Japan',
@@ -92,8 +92,8 @@ const projects: Project[] = [
     description: 'Backend development for Japanese clients including requirement analysis, implementation, system optimization, and API development for frontend integration.',
     image: '/projects/adviser.png',
     tech: ['C#/ASP.NET', 'MySQL', 'AWS'],
-    githubUrl: 'https://github.com/ducnguyen-project/adviser',
-    liveUrl: 'https://adviser.jp',
+    githubUrl: '',
+    liveUrl: '',
     category: 'backend',
     period: '12/2022 - 08/2023',
     client: 'Japan',
@@ -105,8 +105,8 @@ const projects: Project[] = [
     description: 'UI development for a Japanese tourism map system with optimized loading speed and multi-layer map data display.',
     image: '/projects/geomark.png',
     tech: ['Vue.js', 'Nuxt.js', 'PHP/Laravel', 'MySQL'],
-    githubUrl: 'https://github.com/ducnguyen-project/geomark',
-    liveUrl: 'https://geomark.jp',
+    githubUrl: '',
+    liveUrl: '',
     category: 'frontend',
     period: '09/2023 - 12/2023',
     client: 'Japan',
@@ -118,8 +118,8 @@ const projects: Project[] = [
     description: 'A learning management system for Vietnamese users featuring lecture and document management, user-friendly UI, document editing features, and permission management.',
     image: '/projects/lms.png',
     tech: ['Vue.js', 'Nuxt.js', 'JavaScript', 'SCSS'],
-    githubUrl: 'https://github.com/ducnguyen-project/lms',
-    liveUrl: 'https://lms.vn',
+    githubUrl: '',
+    liveUrl: '',
     category: 'frontend',
     period: '04/2022 - 09/2022',
     client: 'Vietnam',
@@ -131,8 +131,8 @@ const projects: Project[] = [
     description: 'An affiliate sales system for Vietnamese users with affiliate link generation, backend API integration, and mobile-optimized UI.',
     image: '/projects/ctv24h.png',
     tech: ['Vue.js', 'Nuxt.js', 'JavaScript', 'SCSS'],
-    githubUrl: 'https://github.com/ducnguyen-project/ctv24h',
-    liveUrl: 'https://ctv24h.vn',
+    githubUrl: '',
+    liveUrl: '',
     category: 'frontend',
     period: '02/2022 - 06/2022',
     client: 'Vietnam',
@@ -144,8 +144,8 @@ const projects: Project[] = [
     description: 'An online learning platform for Vietnamese users featuring videos, quizzes, virtual classrooms, mini-games, and optimized learning experience for students and teachers.',
     image: '/projects/elearning.png',
     tech: ['Vue.js', 'Nuxt.js', 'JavaScript', 'SCSS'],
-    githubUrl: 'https://github.com/ducnguyen-project/elearning',
-    liveUrl: 'https://elearning.vn',
+    githubUrl: '',
+    liveUrl: '',
     category: 'frontend',
     period: '09/2021 - 02/2022',
     client: 'Vietnam',
@@ -157,8 +157,8 @@ const projects: Project[] = [
     description: 'UI development for a Tanzanian fashion e-commerce platform with GraphQL API data integration.',
     image: '/projects/tanzania.png',
     tech: ['React.js', 'Redux', 'GraphQL API', 'JavaScript', 'SCSS'],
-    githubUrl: 'https://github.com/ducnguyen-project/tanzania',
-    liveUrl: 'https://tanzania-shop.com',
+    githubUrl: '',
+    liveUrl: '',
     category: 'frontend',
     period: '02/2021 - 09/2021',
     client: 'Tanzania',
@@ -170,8 +170,8 @@ const projects: Project[] = [
     description: 'UI development for The Body Shop cosmetics website in Malaysia with responsive layout optimization and multi-device experience.',
     image: '/projects/bodyshop.png',
     tech: ['React.js', 'Redux', 'GraphQL API', 'JavaScript', 'SCSS'],
-    githubUrl: 'https://github.com/ducnguyen-project/bodyshop',
-    liveUrl: 'https://thebodyshop.my',
+    githubUrl: '',
+    liveUrl: '',
     category: 'frontend',
     period: '06/2020 - 01/2021',
     client: 'Malaysia',
@@ -298,7 +298,7 @@ export default function ProjectsSection() {
                 </div>
                 
                 <div className="flex space-x-4">
-                  <a
+                  { project.githubUrl && (<a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -306,8 +306,8 @@ export default function ProjectsSection() {
                   >
                     <FaGithub className="mr-2" />
                     <span>Code</span>
-                  </a>
-                  <a
+                  </a>)}
+                  {project.liveUrl && (<a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -315,7 +315,7 @@ export default function ProjectsSection() {
                   >
                     <FaExternalLinkAlt className="mr-2" />
                     <span>Live Demo</span>
-                  </a>
+                  </a>)}
                 </div>
               </div>
             </motion.div>

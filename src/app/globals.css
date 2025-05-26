@@ -2,31 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Enable smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
   
-  /* Các màu primary */
   --primary: #3b82f6;
   --primary-dark: #1d4ed8;
   --primary-light: #60a5fa;
 
-  /* Các màu secondary */
   --secondary: #10b981;
   --secondary-dark: #047857;
   --secondary-light: #34d399;
 
-  /* Các màu accent */
   --accent: #d946ef;
   --accent-dark: #a21caf;
   --accent-light: #e879f9;
 
-  /* Các màu tertiary */
   --tertiary: #f97316;
   --tertiary-dark: #c2410c;
   --tertiary-light: #fb923c;
 
-  /* Đã xóa các màu dark mode */
 }
 
 /* Đã xóa media query prefers-color-scheme và dark class */
@@ -37,7 +37,6 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
-/* Layer đặc biệt cho từng nơi sử dụng gradient */
 @layer components {
   .gradient-primary {
     @apply bg-gradient-to-r from-primary to-primary-dark;

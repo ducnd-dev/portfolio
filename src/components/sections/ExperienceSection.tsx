@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { FaBriefcase, FaGraduationCap } from 'react-icons/fa';
+import AnimatedElement from '../ui/AnimatedElement';
 
 interface TimelineItem {
   id: number;
@@ -49,127 +49,100 @@ const timelineItems: TimelineItem[] = [
     description: [
       'Created Magento extensions & PWA using React',
       'Developed responsive e-commerce interfaces',
-      'Worked with GraphQL and RESTful APIs'
+      'Built custom UI components and pages'
     ],
-    technologies: ['React.js', 'Redux', 'GraphQL', 'SCSS'],
+    technologies: ['React.js', 'Magento', 'PWA', 'Jest'],
     type: 'work'
   },
   {
     id: 4,
-    title: 'Information Technology',
-    company: 'Hanoi College of Technology',
-    date: 'Sep 2017 - Mar 2021',
+    title: 'Hanoi College of Technology',
+    company: 'Computer Programing',
+    date: '2017 - 2021',
     description: [
-      'Studied programming fundamentals and software development',
-      'Developed practical projects and applications',
-      'Gained knowledge in web development technologies'
+      'Specialized in web development',
+      'Developed several academic projects including e-commerce websites'
     ],
-    technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'SQL', 'Data Structures'],
+    technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL'],
     type: 'education'
   }
 ];
 
 export default function ExperienceSection() {
-  return (    <section id="experience" className="py-20 bg-gray-50 dark:bg-dark-DEFAULT relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute top-1/3 right-1/5 w-72 h-72 bg-accent-400 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-secondary-400 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+  return (
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+      <div className="container mx-auto px-4">
+        <AnimatedElement animation="slideUp" className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Experience & Education</h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-accent-500 to-secondary-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            My professional journey and educational background that have shaped my career.
-          </p>
-        </motion.div>        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-0 md:left-1/2 ml-4 md:ml-0 top-0 h-full w-0.5 bg-gradient-to-b from-primary-400 via-secondary-400 to-accent-400 dark:from-primary-700 dark:via-secondary-700 dark:to-accent-700 transform md:-translate-x-1/2"></div>
+          <AnimatedElement animation="scale" delay={0.2} className="h-1 w-20 mx-auto rounded-full">
+            <div className="h-full w-full bg-gradient-to-r from-accent-500 to-tertiary-500"></div>
+          </AnimatedElement>
+          <AnimatedElement animation="fadeIn" delay={0.3}>
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              My professional journey focused on frontend development, showcasing growth from creating e-commerce interfaces to building complex interactive web applications.
+            </p>
+          </AnimatedElement>
+        </AnimatedElement>
 
-            <div className="space-y-12">
-              {timelineItems.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative flex flex-col md:flex-row items-center md:justify-between ${
-                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}
-                >                  <div className="flex-1 w-full md:w-auto">
-                    <div className={`p-5 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white dark:bg-dark-light border-t-4 ${
-                      item.type === 'work' 
-                        ? 'border-primary-500' 
-                        : 'border-secondary-500'
-                    }`}>
-                      <div className="flex items-center mb-2">
-                        <div className={`p-2 rounded-full mr-3 ${
-                          item.type === 'work' 
-                            ? 'bg-primary-100 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400' 
-                            : 'bg-secondary-100 text-secondary-600 dark:bg-secondary-900/20 dark:text-secondary-400'
-                        }`}>
-                          {item.type === 'work' ? (
-                            <FaBriefcase />
-                          ) : (
-                            <FaGraduationCap />
-                          )}
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-600 dark:text-gray-300">{item.company}</p>
-                        </div>
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline line */}
+          <div className="absolute left-6 md:left-1/2 transform md:-translate-x-0.5 top-0 h-full w-1 bg-gray-200 dark:bg-gray-700"></div>
+          
+          {/* Timeline items */}
+          <div className="space-y-12">
+            {timelineItems.map((item, index) => (
+              <AnimatedElement 
+                key={item.id}
+                animation={index % 2 === 0 ? "slideRight" : "slideLeft"} 
+                delay={0.1 * index}
+                className="relative"
+              >
+                <div className={`flex flex-col md:flex-row ${index % 2 ? 'md:flex-row-reverse' : ''}`}>
+                  {/* Timeline dot */}
+                  <div className="absolute left-6 md:left-1/2 transform -translate-x-3 md:-translate-x-3.5 flex items-center justify-center">
+                    <AnimatedElement animation="bounce" delay={0.2 + (index * 0.1)} className="w-7 h-7 rounded-full bg-white dark:bg-dark-DEFAULT border-4 border-tertiary-500 dark:border-tertiary-400 z-10 flex items-center justify-center">
+                      {item.type === 'work' ? (
+                        <FaBriefcase className="h-3 w-3 text-tertiary-500 dark:text-tertiary-400" />
+                      ) : (
+                        <FaGraduationCap className="h-3 w-3 text-tertiary-500 dark:text-tertiary-400" />
+                      )}
+                    </AnimatedElement>
+                  </div>
+                  
+                  <div className={`pb-8 pl-20 md:pl-0 md:w-1/2 ${index % 2 ? 'md:pl-12' : 'md:pr-12'}`}>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-6 border border-gray-100 dark:border-gray-600 hover:shadow-lg transition-all transform hover:-translate-y-1">
+                      <div className="mb-4">
+                        <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-tertiary-100 text-tertiary-800 dark:bg-tertiary-900/30 dark:text-tertiary-300">
+                          {item.date}
+                        </span>
                       </div>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{item.date}</p>
-                      <ul className="list-disc list-inside space-y-1 mb-3 text-gray-600 dark:text-gray-300">
+                      
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                      <h4 className="text-lg font-medium text-tertiary-600 dark:text-tertiary-400 mb-4">{item.company}</h4>
+                      
+                      <ul className="list-disc list-inside space-y-2 mb-4 text-gray-700 dark:text-gray-300">
                         {item.description.map((desc, i) => (
-                          <li key={i}>{desc}</li>
+                          <AnimatedElement key={i} animation="fadeIn" delay={0.3 + (i * 0.1) + (index * 0.05)} className="pl-2">
+                            <li>{desc}</li>
+                          </AnimatedElement>
                         ))}
-                      </ul>                      <div className="flex flex-wrap gap-2">
-                        {item.technologies.map((tech, i) => (
+                      </ul>
+                      
+                      <AnimatedElement animation="fadeIn" delay={0.4 + (index * 0.1)} className="flex flex-wrap gap-2 mt-4">
+                        {item.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className={`px-2 py-1 text-xs rounded-full font-medium ${
-                              item.type === 'work'
-                                ? i % 3 === 0 ? 'bg-primary-100 text-primary-800 dark:bg-primary-900/30 dark:text-primary-300' :
-                                  i % 3 === 1 ? 'bg-tertiary-100 text-tertiary-800 dark:bg-tertiary-900/30 dark:text-tertiary-300' :
-                                  'bg-accent-100 text-accent-800 dark:bg-accent-900/30 dark:text-accent-300'
-                                : i % 3 === 0 ? 'bg-secondary-100 text-secondary-800 dark:bg-secondary-900/30 dark:text-secondary-300' :
-                                  i % 3 === 1 ? 'bg-accent-100 text-accent-800 dark:bg-accent-900/30 dark:text-accent-300' :
-                                  'bg-tertiary-100 text-tertiary-800 dark:bg-tertiary-900/30 dark:text-tertiary-300'
-                            }`}
+                            className="px-2 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded-md"
                           >
                             {tech}
                           </span>
                         ))}
-                      </div>
+                      </AnimatedElement>
                     </div>
-                  </div>                  {/* Timeline dot */}
-                  <div className={`absolute left-4 md:left-1/2 top-8 w-8 h-8 rounded-full bg-white shadow-md dark:bg-dark-light transform md:-translate-x-1/2 flex items-center justify-center border-2 ${
-                    item.type === 'work'
-                      ? 'border-primary-500 dark:border-primary-600'
-                      : 'border-secondary-500 dark:border-secondary-600'
-                  }`}>
-                    {item.type === 'work' ? (
-                      <FaBriefcase className={`text-primary-500 dark:text-primary-400 text-xs`} />
-                    ) : (
-                      <FaGraduationCap className={`text-secondary-500 dark:text-secondary-400 text-xs`} />
-                    )}
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </AnimatedElement>
+            ))}
           </div>
         </div>
       </div>

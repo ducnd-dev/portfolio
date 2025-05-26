@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDatabase, FaDocker, FaGitAlt, FaLaravel, FaPhp } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiTailwindcss, SiPostgresql, SiNestjs, SiVuedotjs, SiNuxtdotjs, SiDotnet, SiMysql, SiFirebase, SiSupabase, SiGraphql } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaDocker, FaLaravel, } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiTailwindcss, SiNestjs, SiVuedotjs, SiNuxtdotjs, SiFirebase, SiSupabase, SiGraphql, SiMysql, SiDotnet } from 'react-icons/si';
+import AnimatedElement from '../ui/AnimatedElement';
 
 interface Skill {
   name: string;
@@ -10,128 +10,139 @@ interface Skill {
   level: number;
 }
 
-const frontendSkills: Skill[] = [
-  { name: 'Vue.js', icon: <SiVuedotjs className="h-8 w-8" />, level: 80 },
-  { name: 'React.js', icon: <FaReact className="h-8 w-8" />, level: 75 },
-  { name: 'TypeScript', icon: <SiTypescript className="h-8 w-8" />, level: 70 },
-  { name: 'Nuxt.js', icon: <SiNuxtdotjs className="h-8 w-8" />, level: 80 },
-  { name: 'Next.js', icon: <SiNextdotjs className="h-8 w-8" />, level: 75 },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss className="h-8 w-8" />, level: 80 }
+const reactSkills: Skill[] = [
+  { name: 'React.js', icon: <FaReact className="h-8 w-8" />, level: 90 },
+  { name: 'Next.js', icon: <SiNextdotjs className="h-8 w-8" />, level: 85 },
+  { name: 'Redux', icon: <SiGraphql className="h-8 w-8" />, level: 85 },
+  { name: 'TypeScript', icon: <SiTypescript className="h-8 w-8" />, level: 80 },
+  { name: 'React Testing Library', icon: <FaGitAlt className="h-8 w-8" />, level: 80 }
 ];
 
-const backendSkills: Skill[] = [
+const vueSkills: Skill[] = [
+  { name: 'Vue.js', icon: <SiVuedotjs className="h-8 w-8" />, level: 90 },
+  { name: 'Nuxt.js', icon: <SiNuxtdotjs className="h-8 w-8" />, level: 85 },
+  { name: 'Vuex', icon: <SiNestjs className="h-8 w-8" />, level: 85 },
+  { name: 'Vue Router', icon: <FaNodeJs className="h-8 w-8" />, level: 90 },
+  { name: 'Vue Testing', icon: <FaGitAlt className="h-8 w-8" />, level: 80 }
+];
+
+const cssSkills: Skill[] = [
+  { name: 'Tailwind CSS', icon: <SiTailwindcss className="h-8 w-8" />, level: 80 },
+  { name: 'SCSS/SASS', icon: <FaDatabase className="h-8 w-8" />, level: 85 },
+  { name: 'CSS Animations', icon: <SiFirebase className="h-8 w-8" />, level: 85 },
+  { name: 'Responsive Design', icon: <SiSupabase className="h-8 w-8" />, level: 95 },
+  { name: 'Bootstrap', icon: <FaGitAlt className="h-8 w-8" />, level: 85 },
+];
+
+const additionalSkills: Skill[] = [
   { name: 'Node.js', icon: <FaNodeJs className="h-8 w-8" />, level: 60 },
-  { name: 'NestJS', icon: <SiNestjs className="h-8 w-8" />, level: 60 },
-  { name: 'Laravel', icon: <FaLaravel className="h-8 w-8" />, level: 50 },
-  { name: 'PHP', icon: <FaPhp className="h-8 w-8" />, level: 60 },
-  { name: 'C#/ASP.NET', icon: <SiDotnet className="h-8 w-8" />, level: 55 },
   { name: 'MySQL', icon: <SiMysql className="h-8 w-8" />, level: 65 },
-  { name: 'PostgreSQL', icon: <SiPostgresql className="h-8 w-8" />, level: 50 }
-];
-
-const otherSkills: Skill[] = [
   { name: 'Docker', icon: <FaDocker className="h-8 w-8" />, level: 60 },
-  { name: 'Firebase', icon: <SiFirebase className="h-8 w-8" />, level: 65 },
-  { name: 'Supabase', icon: <SiSupabase className="h-8 w-8" />, level: 60 },
-  { name: 'GraphQL', icon: <SiGraphql className="h-8 w-8" />, level: 65 },
-  { name: 'Git', icon: <FaGitAlt className="h-8 w-8" />, level: 80 },
-  { name: 'REST APIs', icon: <FaDatabase className="h-8 w-8" />, level: 90 }
+  { name: 'Laravel', icon: <FaLaravel className="h-8 w-8" />, level: 50 },
+  { name: 'C#/ASP.NET', icon: <SiDotnet className="h-8 w-8" />, level: 55 }
 ];
 
-function SkillBar({ skill }: { skill: Skill }) {
+function SkillBar({ skill, index }: { skill: Skill; index: number }) {
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      viewport={{ once: true }}
+    <AnimatedElement 
+      animation="slideRight"
+      delay={0.1 + index * 0.05}
       className="mb-6"
     >
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center">
-          <div className="mr-3 text-primary-500 dark:text-primary-400">{skill.icon}</div>
-          <span className="font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+          <AnimatedElement animation="bounce" delay={0.3 + index * 0.05} className="mr-3 text-primary-500 dark:text-primary-400">
+            {skill.icon}
+          </AnimatedElement>
+          <div className="font-medium text-gray-900 dark:text-white">{skill.name}</div>
         </div>
-        <span className="text-sm text-primary-600 dark:text-primary-400 font-semibold">{skill.level}%</span>
+        <div className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</div>
       </div>
-      <div className="w-full h-3 bg-gray-200 rounded-full dark:bg-gray-700 overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          viewport={{ once: true }}
-          className={`h-3 rounded-full ${getGradientClass(skill.level)}`}
-        />
+      <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+        <AnimatedElement
+          animation="slideRight"
+          delay={0.2 + index * 0.05}
+          className="h-full bg-gradient-to-r from-primary-500 to-accent-500"
+          style={{ width: `${skill.level}%` }}
+        >
+          <div className="w-full h-full"></div>
+        </AnimatedElement>
       </div>
-    </motion.div>
-  );
-}
-
-function getGradientClass(level: number): string {
-  if (level >= 90) return 'bg-gradient-to-r from-primary-600 to-primary-400';
-  if (level >= 80) return 'bg-gradient-to-r from-tertiary-600 to-tertiary-400';
-  if (level >= 70) return 'bg-gradient-to-r from-secondary-600 to-secondary-400';
-  return 'bg-gradient-to-r from-accent-600 to-accent-400';
-}
-
-function SkillCategory({ title, skills }: { title: string; skills: Skill[] }) {
-  return (
-    <div className="mb-10">
-      <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6">{title}</h3>
-      <div>
-        {skills.map((skill) => (
-          <SkillBar key={skill.name} skill={skill} />
-        ))}
-      </div>
-    </div>
+    </AnimatedElement>
   );
 }
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-dark-DEFAULT">
+    <section id="skills" className="py-20 bg-white dark:bg-dark-DEFAULT">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">My Skills</h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of the technologies I&apos;ve been working with recently. I&apos;m constantly learning and expanding my skill set.
-          </p>
-        </motion.div>
+        <AnimatedElement animation="slideUp" className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">My Frontend Skills</h2>
+          <AnimatedElement animation="scale" delay={0.2} className="h-1 w-20 mx-auto rounded-full">
+            <div className="h-full w-full bg-gradient-to-r from-primary-500 to-accent-500"></div>
+          </AnimatedElement>
+          <AnimatedElement animation="fadeIn" delay={0.3}>
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              As a specialized Frontend Developer, I&apos;ve mastered various frontend technologies, frameworks, and libraries. Here&apos;s a breakdown of my technical expertise and proficiency levels.
+            </p>
+          </AnimatedElement>
+        </AnimatedElement>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <SkillCategory title="Frontend" skills={frontendSkills} />
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <SkillCategory title="Backend" skills={backendSkills} />
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <SkillCategory title="Other" skills={otherSkills} />
-          </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          <AnimatedElement animation="slideUp" delay={0.1} className="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow-md">
+            <AnimatedElement animation="fadeIn" delay={0.2}>
+              <h3 className="text-xl font-semibold text-center mb-6 text-gray-900 dark:text-white flex items-center justify-center gap-3">
+                <FaReact className="text-primary-600 dark:text-primary-400" /> 
+                React Ecosystem
+              </h3>
+            </AnimatedElement>
+            <div className="space-y-4">
+              {reactSkills.map((skill, index) => (
+                <SkillBar key={skill.name} skill={skill} index={index} />
+              ))}
+            </div>
+          </AnimatedElement>
+
+          <AnimatedElement animation="slideUp" delay={0.2} className="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow-md">
+            <AnimatedElement animation="fadeIn" delay={0.3}>
+              <h3 className="text-xl font-semibold text-center mb-6 text-gray-900 dark:text-white flex items-center justify-center gap-3">
+                <SiVuedotjs className="text-primary-600 dark:text-primary-400" /> 
+                Vue Ecosystem
+              </h3>
+            </AnimatedElement>
+            <div className="space-y-4">
+              {vueSkills.map((skill, index) => (
+                <SkillBar key={skill.name} skill={skill} index={index} />
+              ))}
+            </div>
+          </AnimatedElement>
+
+          <AnimatedElement animation="slideUp" delay={0.3} className="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow-md">
+            <AnimatedElement animation="fadeIn" delay={0.4}>
+              <h3 className="text-xl font-semibold text-center mb-6 text-gray-900 dark:text-white flex items-center justify-center gap-3">
+                <SiTailwindcss className="text-primary-600 dark:text-primary-400" /> 
+                CSS & UI/UX
+              </h3>
+            </AnimatedElement>
+            <div className="space-y-4">
+              {cssSkills.map((skill, index) => (
+                <SkillBar key={skill.name} skill={skill} index={index} />
+              ))}
+            </div>
+          </AnimatedElement>
+          <AnimatedElement animation="slideUp" delay={0.3} className="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 shadow-md">
+            <AnimatedElement animation="fadeIn" delay={0.4}>
+              <h3 className="text-xl font-semibold text-center mb-6 text-gray-900 dark:text-white flex items-center justify-center gap-3">
+                <SiTailwindcss className="text-primary-600 dark:text-primary-400" /> 
+                Additional Skills
+              </h3>
+            </AnimatedElement>
+            <div className="space-y-4">
+              {additionalSkills.map((skill, index) => (
+                <SkillBar key={skill.name} skill={skill} index={index} />
+              ))}
+            </div>
+          </AnimatedElement>
         </div>
       </div>
     </section>

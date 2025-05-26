@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import SocialIcons from '../ui/SocialIcons';
+import AnimatedElement from '../ui/AnimatedElement';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -48,7 +48,8 @@ export default function ContactSection() {
     }, 1500);
   };
 
-  return (    <section id="contact" className="py-20 bg-white dark:bg-dark-DEFAULT relative overflow-hidden">
+  return (
+    <section id="contact" className="py-20 bg-white dark:bg-dark-DEFAULT relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-primary-400 rounded-full blur-3xl"></div>
@@ -56,27 +57,20 @@ export default function ContactSection() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out using the form below.
-          </p>
-        </motion.div>
+        <AnimatedElement animation="slideUp" className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Get In Touch</h2>
+          <AnimatedElement animation="scale" delay={0.2} className="h-1 w-20 mx-auto rounded-full">
+            <div className="h-full w-full bg-gradient-to-r from-primary-500 to-secondary-500"></div>
+          </AnimatedElement>
+          <AnimatedElement animation="fadeIn" delay={0.3}>
+            <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Have a project in mind or want to collaborate? Feel free to reach out using the form below.
+            </p>
+          </AnimatedElement>
+        </AnimatedElement>
 
         <div className="flex flex-col lg:flex-row gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="lg:w-1/3"
-          >
+          <AnimatedElement animation="slideRight" delay={0.1} className="lg:w-1/3">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 Contact Information
@@ -86,80 +80,72 @@ export default function ContactSection() {
                 opportunities, or partnerships.
               </p>
 
-              <div className="space-y-4">                <div className="flex items-start">
-                  <div className="p-3 bg-primary-100 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400 rounded-lg mr-4 shadow-sm">
-                    <FaEnvelope className="h-5 w-5" />
+              <div className="space-y-4">
+                <AnimatedElement animation="fadeIn" delay={0.2}>
+                  <div className="flex items-start">
+                    <AnimatedElement animation="bounce" delay={0.4} className="p-3 bg-primary-100 text-primary-600 dark:bg-primary-900/20 dark:text-primary-400 rounded-lg mr-4 shadow-sm">
+                      <FaEnvelope className="h-5 w-5" />
+                    </AnimatedElement>
+                    <div>
+                      <h4 className="text-gray-900 dark:text-white font-medium">Email</h4>
+                      <a href="mailto:nguyendinhducbg2904@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                        nguyendinhducbg2904@gmail.com
+                      </a>
+                    </div>
                   </div>
-                  <div>                    <h4 className="text-gray-900 dark:text-white font-medium">Email</h4>
-                    <a href="mailto:nguyendinhducbg2904@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                      nguyendinhducbg2904@gmail.com
-                    </a>
+                </AnimatedElement>
+                
+                <AnimatedElement animation="fadeIn" delay={0.3}>
+                  <div className="flex items-start">
+                    <AnimatedElement animation="bounce" delay={0.5} className="p-3 bg-secondary-100 text-secondary-600 dark:bg-secondary-900/20 dark:text-secondary-400 rounded-lg mr-4 shadow-sm">
+                      <FaPhoneAlt className="h-5 w-5" />
+                    </AnimatedElement>
+                    <div>
+                      <h4 className="text-gray-900 dark:text-white font-medium">Phone</h4>
+                      <a href="tel:+84973243422" className="text-gray-600 dark:text-gray-300 hover:text-secondary-500 dark:hover:text-secondary-400 transition-colors">
+                        +84 973 243 422
+                      </a>
+                    </div>
                   </div>
-                </div>                <div className="flex items-start">
-                  <div className="p-3 bg-secondary-100 text-secondary-600 dark:bg-secondary-900/20 dark:text-secondary-400 rounded-lg mr-4 shadow-sm">
-                    <FaPhoneAlt className="h-5 w-5" />
+                </AnimatedElement>
+                
+                <AnimatedElement animation="fadeIn" delay={0.4}>
+                  <div className="flex items-start">
+                    <AnimatedElement animation="bounce" delay={0.6} className="p-3 bg-accent-100 text-accent-600 dark:bg-accent-900/20 dark:text-accent-400 rounded-lg mr-4 shadow-sm">
+                      <FaMapMarkerAlt className="h-5 w-5" />
+                    </AnimatedElement>
+                    <div>
+                      <h4 className="text-gray-900 dark:text-white font-medium">Location</h4>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        Hanoi, Vietnam
+                      </p>
+                    </div>
                   </div>
-                  <div>                    <h4 className="text-gray-900 dark:text-white font-medium">Phone</h4>
-                    <a href="tel:+84347634141" className="text-gray-600 dark:text-gray-300 hover:text-secondary-500 dark:hover:text-secondary-400 transition-colors">
-                      +84 347 634 141
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">                <div className="p-3 bg-tertiary-100 text-tertiary-600 dark:bg-tertiary-900/20 dark:text-tertiary-400 rounded-lg mr-4 shadow-sm">
-                    <FaMapMarkerAlt className="h-5 w-5" />
-                  </div>
-                  <div>                    <h4 className="text-gray-900 dark:text-white font-medium">Location</h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Ha Noi, Viet Nam
-                    </p>
-                  </div>
-                </div>
+                </AnimatedElement>
               </div>
-            </div>            <div>              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Follow Me
-              </h3>              <SocialIcons 
-                iconSize={5} 
-                className="space-x-4" 
-                useGradient={true}
-                showTwitter={false}
-                githubUrl="https://github.com/ducnd-dev"
-                linkedinUrl="https://www.linkedin.com/in/nguyen-dinh-duc-b183561b7/"
-                customIcons={[
-                  // {
-                  //   name: "Instagram",
-                  //   url: "https://instagram.com/duc_nguyen2904",
-                  //   icon: FaInstagram,
-                  //   gradientColors: "bg-gradient-to-r from-pink-600 via-red-500 to-yellow-500"
-                  // },
-                  // {
-                  //   name: "YouTube",
-                  //   url: "https://youtube.com/@ducnguyen-dev",
-                  //   icon: FaYoutube,
-                  //   gradientColors: "bg-gradient-to-r from-red-600 to-red-500"
-                  // }
-                ]}
-              />
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="lg:w-2/3"
-          >            <div className="bg-white dark:bg-dark-light rounded-lg shadow-lg p-8 border border-gray-100 dark:border-gray-700">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
-                <span className="bg-gradient-to-r from-primary-500 to-tertiary-500 h-6 w-1 rounded-full mr-3"></span>
-                Send me a Message
+            <AnimatedElement animation="fadeIn" delay={0.5}>
+              <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  Connect With Me
+                </h3>
+                <SocialIcons className="flex justify-start gap-4" iconSize={6} />
+              </div>
+            </AnimatedElement>
+          </AnimatedElement>
+
+          <AnimatedElement animation="slideLeft" delay={0.3} className="lg:w-2/3">
+            <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                Send Me a Message
               </h3>
-
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Your Name
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <AnimatedElement animation="fadeIn" delay={0.4} className="space-y-2">
+                    <label htmlFor="name" className="text-gray-700 dark:text-gray-300 font-medium">
+                      Name
                     </label>
                     <input
                       type="text"
@@ -167,13 +153,15 @@ export default function ContactSection() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary dark:border-gray-600 dark:bg-gray-800 dark:text-white"
                       required
+                      className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 transition-all text-gray-900 dark:text-white"
+                      placeholder="Your name"
                     />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Your Email
+                  </AnimatedElement>
+                  
+                  <AnimatedElement animation="fadeIn" delay={0.5} className="space-y-2">
+                    <label htmlFor="email" className="text-gray-700 dark:text-gray-300 font-medium">
+                      Email
                     </label>
                     <input
                       type="email"
@@ -181,14 +169,15 @@ export default function ContactSection() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary dark:border-gray-600 dark:bg-gray-800 dark:text-white"
                       required
+                      className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 transition-all text-gray-900 dark:text-white"
+                      placeholder="Your email"
                     />
-                  </div>
+                  </AnimatedElement>
                 </div>
-
-                <div className="mb-6">
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                
+                <AnimatedElement animation="fadeIn" delay={0.6} className="space-y-2">
+                  <label htmlFor="subject" className="text-gray-700 dark:text-gray-300 font-medium">
                     Subject
                   </label>
                   <input
@@ -197,48 +186,58 @@ export default function ContactSection() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary dark:border-gray-600 dark:bg-gray-800 dark:text-white"
                     required
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 transition-all text-gray-900 dark:text-white"
+                    placeholder="Subject"
                   />
-                </div>
-
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                </AnimatedElement>
+                
+                <AnimatedElement animation="fadeIn" delay={0.7} className="space-y-2">
+                  <label htmlFor="message" className="text-gray-700 dark:text-gray-300 font-medium">
                     Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
-                    rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary dark:border-gray-600 dark:bg-gray-800 dark:text-white"
                     required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 transition-all resize-none text-gray-900 dark:text-white"
+                    placeholder="Your message"
                   ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full py-3 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-lg hover:from-primary-700 hover:to-primary-600 focus:ring-4 focus:ring-primary-500 focus:ring-opacity-50 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-md"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </button>
-
-                {submitStatus === 'success' && (
-                  <p className="mt-4 text-center text-green-500 dark:text-green-400">
-                    Message sent successfully!
-                  </p>
-                )}
-
-                {submitStatus === 'error' && (
-                  <p className="mt-4 text-center text-red-500 dark:text-red-400">
-                    Failed to send message. Please try again.
-                  </p>
-                )}
+                </AnimatedElement>
+                
+                <AnimatedElement animation="fadeIn" delay={0.8}>
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className={`px-6 py-3 rounded-lg text-white font-medium transition-all ${
+                        isSubmitting 
+                          ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed' 
+                          : 'bg-primary-600 hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-600 shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
+                      }`}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </button>
+                  </div>
+                  
+                  {submitStatus === 'success' && (
+                    <div className="mt-4 p-3 bg-green-50 border border-green-200 text-green-700 dark:bg-green-900/20 dark:border-green-800 dark:text-green-400 rounded-lg">
+                      Your message has been sent successfully! I&apos;ll get back to you soon.
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 dark:bg-red-900/20 dark:border-red-800 dark:text-red-400 rounded-lg">
+                      There was an error sending your message. Please try again later.
+                    </div>
+                  )}
+                </AnimatedElement>
               </form>
             </div>
-          </motion.div>
+          </AnimatedElement>
         </div>
       </div>
     </section>
